@@ -9,12 +9,13 @@ nav {
 }
 #nav-links{
     display: flex;
-    list-style: none; 
+    list-style: none;
+    padding: 10px;
 }
 #nav-links a{
     text-decoration: none;
-    margin: 20px;
     color: whitesmoke;
+    margin: 10px;
     transition: all;
     transition-duration: 500ms;
 }
@@ -40,6 +41,7 @@ nav {
 #nav-col-links a{
     text-decoration: none;
     color: black;
+    background-color: rgb(156, 152, 152);
     transition: all;
     transition-duration: 500ms;
 }
@@ -48,7 +50,8 @@ nav {
 }
 #link{
     padding: 10px;
-    display: block;
+    display: flex;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.041);
     text-align: center;
 }
