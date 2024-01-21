@@ -13,7 +13,7 @@ nav {
 }
 #nav-links a{
     text-decoration: none;
-    margin: 15px;
+    margin: 20px;
     color: whitesmoke;
     transition: all;
     transition-duration: 500ms;
