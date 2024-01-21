@@ -4,7 +4,7 @@ body{
 }
 nav {
     display: flex;
-    background-color: rgb(180, 174, 174);
+    background-color: rgb(0, 0, 0);
     justify-content: space-around;
 }
 #nav-links{
@@ -13,9 +13,8 @@ nav {
 }
 #nav-links a{
     text-decoration: none;
-    padding: 10px 0px 10px 0px;
-    margin: 10px;
-    color: black;
+    margin: 15px;
+    color: whitesmoke;
     transition: all;
     transition-duration: 500ms;
 }
@@ -29,22 +28,13 @@ nav {
 
 #menu{
     display: flex;
-    align-items: center;
+    align-items: center; 
 }
 #menu:hover{
     box-shadow: 20px white;
 }
-#nav-col-links{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.041);
-    list-style: none;
-    margin-top: 0px;
-    transition: all;
-    transition-duration: 500ms;
-    height: 150px;
+.nav-col-links{
+    display: none;
 }
 
 #nav-col-links a{
@@ -58,8 +48,15 @@ nav {
 }
 #link{
     padding: 10px;
-    width: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.041);
+    text-align: center;
 }
+#link:hover{
+    background-color: black;
+}
+
+
 
 
 
@@ -67,7 +64,7 @@ nav {
     #nav-links{
         display: none;
     }
-    
+
 }
 
 @media screen and (min-width: 800px) {
@@ -80,11 +77,3 @@ nav {
     
 }
 
-#box{
-    width: 100px;
-    height: 100px;
-    background-color: rgb(48, 80, 17);
-}
-.show{
-    background-color: red;
-}
