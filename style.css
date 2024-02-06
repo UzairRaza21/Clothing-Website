@@ -89,3 +89,62 @@ nav {
     100%{color: black;}
 }
 
+.T-shirts-collections{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 60px 0px;
+}
+.flex-item{
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 2px;
+   
+}
+.flex-item > button{
+    width: 200px;
+    background-color: black;
+    color: whitesmoke;
+    transition: all 500ms;
+    height: 40px;
+}
+.flex-item > button:hover{
+    color: goldenrod;
+}
+.flex-item img{
+    width: 250px;
+    height: 300px;
+    transition: all 500ms;
+}
+.flex-item img:hover{
+    transform: scale(1.50);
+    border-radius: 10px;
+}
+.footer-container{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.footer-links > a{
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 500ms;
+}
+.footer-links > a:hover {
+    color: goldenrod;
+}
+.footer-social{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+}
