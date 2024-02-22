@@ -27,7 +27,11 @@ include("login-auth.php");
             <ul id="nav-links">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./products.html">Products</a></li>
+<<<<<<< HEAD
                 <li><a href="./contact.php">Contact</a></li>
+=======
+                <li><a href="./contact.html">Contact</a></li>
+>>>>>>> 60db960d1a1d4f664caea900da6daedac2e0fb95
                 <li><a href="./login.php">Login</a></li>
             </ul>
         </div>
@@ -41,7 +45,11 @@ include("login-auth.php");
         <div id="nav-col-links" class="nav-col-links">
             <a id="link" href="./index.html">Home</a>
             <a id="link" href="./products.html">Products</a>
+<<<<<<< HEAD
             <a id="link" href="./contact.php">Contact</a>
+=======
+            <a id="link" href="./contact.html">Contact</a>
+>>>>>>> 60db960d1a1d4f664caea900da6daedac2e0fb95
             <a id="link" href="./login.php">Login</a>
         </div>
     </div>
