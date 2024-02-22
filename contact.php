@@ -14,15 +14,15 @@
     <!-- Nav Start -->
     <nav>
         <div id="logo-pic">
-           <a href="./index.html"> <img src="./lmages/logo.jpg" alt="threads" width="180" height="60" href="./index.html"></a>
+            <img src="./lmages/logo.jpg" alt="threads" width="180" height="60">
         </div>
         
         <div>
             <ul id="nav-links">
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./product.html">Products</a></li>
+                <li><a href="./products.html">Products</a></li>
                 <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./login.html">Login</a></li>
+                <li><a href="./login.php">Login</a></li>
             </ul>
         </div>
 
@@ -34,36 +34,46 @@
     <div id="nav-col" >
         <div id="nav-col-links" class="nav-col-links">
             <a id="link" href="./index.html">Home</a>
-            <a id="link" href="">Products</a>
-            <a id="link" href="">Contact</a>
-            <a id="link" href="./login.html">Login</a>
+            <a id="link" href="./products.html">Products</a>
+            <a id="link" href="./contact.html">Contact</a>
+            <a id="link" href="./login.php">Login</a>
         </div>
     </div>
     <!-- Nav End -->
 
-    <!-- Login Section Start -->
 
-    <div class="login-container">
-        <h1>Login</h1>
-        <form action="" method="post" class="login-section">
-            <label for="email">Email  
-                <input type="email" name="uemail" id="uemail" style="width: 200px; margin-left: 28px;">
+    <!-- Contact Us Start -->
+    <div class="contact-container">
+        <h1 >Contact Us</h1>
+        <form action="insert.php" method="post" >
+            <label for="cname" >Name 
+                <input type="text" name="cname" id="cname" style="margin-left: 22px; width: 250px">
             </label><br><br>
 
-            <label for="password">Password 
-                <input type="password" name="upassword" id="upassword" style="width: 200px;">
+            <label for="cmobile">Mobile
+                <input type="text" name="cmobile" id="cmobile" style="margin-left: 17px; width: 250px" >
             </label><br><br>
 
-            <input type="submit" value="Login" class="login-button" style="margin: 10px 70px;">
+            <label for="cemail">Email
+                <input type="email" name="cemail" id="cemail" style="margin-left: 30px; width: 250px">
+            </label><br><br>
+
+            <label for="cmessage">Message
+                <textarea name="cmessage" id="cmessage" cols="40" rows="8" style="margin-left: 5px; width: 250px"></textarea>
+            </label><br><br>
+
+            <input type="submit" value="Submit" class="contact-button" name="submitted">
         </form>
+
     </div>
 
 
 
+    <!-- Contact us End -->
 
 
 
-<!-- Login Section End -->
+
     
 <!-- Footer Start -->
 

@@ -44,7 +44,7 @@ if (isset($_POST['register'])){
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./products.html">Products</a></li>
                 <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./login.html">Login</a></li>
+                <li><a href="./login.php">Login</a></li>
             </ul>
         </div>
 
@@ -58,7 +58,7 @@ if (isset($_POST['register'])){
             <a id="link" href="./index.html">Home</a>
             <a id="link" href="./products.html">Products</a>
             <a id="link" href="./contact.html">Contact</a>
-            <a id="link" href="./login.html">Login</a>
+            <a id="link" href="./login.php">Login</a>
         </div>
     </div>
     <!-- Nav End -->
@@ -68,7 +68,7 @@ if (isset($_POST['register'])){
     <div class="register-container">
 
         <h1 style="margin-bottom: 20px;">Register Yourself</h1>
-        <form method="post">
+        <form method="post" action="">
             <label for="">Username
                 <input type="text" name="username" id="username" >
             </label><br><br>

@@ -44,8 +44,8 @@ if (isset($_POST['login'])){
             <ul id="nav-links">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./products.html">Products</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./login.html">Login</a></li>
+                <li><a href="./contact.php">Contact</a></li>
+                <li><a href="./login.php">Login</a></li>
             </ul>
         </div>
 
@@ -58,8 +58,8 @@ if (isset($_POST['login'])){
         <div id="nav-col-links" class="nav-col-links">
             <a id="link" href="./index.html">Home</a>
             <a id="link" href="./products.html">Products</a>
-            <a id="link" href="./contact.html">Contact</a>
-            <a id="link" href="./login.html">Login</a>
+            <a id="link" href="./contact.php">Contact</a>
+            <a id="link" href="./login.php">Login</a>
         </div>
     </div>
     <!-- Nav End -->
@@ -76,8 +76,8 @@ if (isset($_POST['login'])){
                 <input type="password" name="passwor" id="upassword" style="margin-left: 13px; width: 220px">
             </label><br><br>
 
-            <input type="submit" value="Login" class="login-button">
-            <p style="margin-top: 10px;">Don't have a account? <a href="./register.html">Register Here</a></p>
+            <input type="submit" value="Login" class="login-button" name="login">
+            <p style="margin-top: 10px;">Don't have a account? <a href="./register.php">Register Here</a></p>
 
         </form>
     </div>

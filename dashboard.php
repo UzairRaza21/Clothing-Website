@@ -19,10 +19,12 @@
         
         <div>
             <ul id="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./product.html">Products</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./login.html">Login</a></li>
+                <li><a href="./dashboard.php">Dashboard</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./customer-contacted.php">Customer Contacted</a></li>
+                <li><a href="">Orders Received</a></li>
+                <li><a href="">Registrated Customer Data</a></li>
+                <li><a href="./index.html">Goto Website</a></li>
             </ul>
         </div>
 
@@ -33,10 +35,12 @@
     
     <div id="nav-col" >
         <div id="nav-col-links" class="nav-col-links">
-            <a id="link" href="./index.html">Home</a>
-            <a id="link" href="">Products</a>
-            <a id="link" href="">Contact</a>
-            <a id="link" href="./login.html">Login</a>
+                    <a id="link" href="./dashboard.php">Dashboard</a>
+                    <a id="link" href="./products.html">Products</a>
+                    <a id="link" href="./customer-contacted.php">Customer Contacted</a>
+                    <a id="link" href="">Orders Received</a>
+                    <a id="link" href="">Registrated Customer Data</a>
+                    <a id="link" href="./index.html">Goto Website</a>
         </div>
     </div>
     <!-- Nav End -->
@@ -44,34 +48,8 @@
 
 
 
-
-
-
     
-<!-- Footer Start -->
 
-<div class="footer-container">
-    <div class="footer-logo">
-      <a href="./index.html"><img src="./lmages/logo.jpg" alt="suckers" width="160" height="60" ></a>
-    </div>
-  
-    <div class="footer-links">
-      <a href="">Return and Exchange</a>
-      <a href="">Payment Methods</a>
-      <a href="">Delivery Charges</a>
-    </div>
-  
-    <div class="footer-social">
-      <i class="fa-brands fa-facebook"></i>
-      <i>Instagram</i>
-      <i>Whatsapp</i>
-      <i>Message</i>
-    </div>
-  
-  
-  
-  
-  </div>
     
     <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
