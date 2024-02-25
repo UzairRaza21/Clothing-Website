@@ -66,19 +66,20 @@ if($row > 0){
 <form method="post" action="contacted-cus-edited-data.php">
     <label for="">
         Customer Name: 
-        <input type="text" name="cname" id="cname" value="<?php echo $customer['cname'] ?>">
+        <input type="hidden" name="contact-id" id="cname" value="<?php echo $customer['id'] ?>">
+        <input type="text" name="contact-name" id="cname" value="<?php echo $customer['cname'] ?>">
     </label><br><br>
     <label for="">
         Mobile: 
-        <input type="text" name="cmobile" id="cmobile" value="<?php echo $customer['cmobile'] ?>">
+        <input type="text" name="contact-mobile" id="cmobile" value="<?php echo $customer['cmobile'] ?>">
     </label><br><br>
     <label for="">
         Email: 
-        <input type="text" name="cemail" id="cemail" value="<?php echo $customer['cemail'] ?>">
+        <input type="text" name="contact-email" id="cemail" value="<?php echo $customer['cemail'] ?>">
     </label><br><br>
     <label for="">
         Message: 
-        <input type="text" name="cmessage" id="cmessage" value="<?php echo $customer['cmessage'] ?>">
+        <input type="text" name="contact-message" id="cmessage" value="<?php echo $customer['cmessage'] ?>">
     </label><br><br>
     
     <input type="submit" value="Update Customer" name="subBtn" id="subBtn">
@@ -92,12 +93,6 @@ else {
 }
 ?>
 <!-- Form End -->
-
-
-
-
-    
-
     
     <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
