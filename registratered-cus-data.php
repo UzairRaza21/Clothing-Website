@@ -77,7 +77,7 @@ if($row > 0){
             <td><?php echo $row['email']?></td>
             <td><?php echo $row['passwor']?></td>
             <td><a href="registrated-cus-edit-del.php?cid=<?php echo $row['id'] ?>"><button>Edit</button></a></td>
-            <td><a href="registrated-cus-edit-del.php?cid=<?php echo $row['id']?>"><button>Delete</button></a></td>
+            <td><a href="registrated-cus-delete.php?cid=<?php echo $row['id']?>"><button>Delete</button></a></td>
         </tr>
         <?php
         }
