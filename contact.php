@@ -20,8 +20,8 @@
         <div>
             <ul id="nav-links">
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./products.html">Products</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./products.php">Products</a></li>
+                <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./login.php">Login</a></li>
             </ul>
         </div>
@@ -34,8 +34,8 @@
     <div id="nav-col" >
         <div id="nav-col-links" class="nav-col-links">
             <a id="link" href="./index.html">Home</a>
-            <a id="link" href="./products.html">Products</a>
-            <a id="link" href="./contact.html">Contact</a>
+            <a id="link" href="./products.php">Products</a>
+            <a id="link" href="./contact.php">Contact</a>
             <a id="link" href="./login.php">Login</a>
         </div>
     </div>
