@@ -90,11 +90,12 @@ nav {
 }
 
 .T-shirts-collections{
-    display: flex;
-    gap: 10px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 60px 0px;
+    /* display: flex; */
+    /* gap: 10px; */
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
+    /* margin: 60px 0px; */
+    float: left;
 }
 .flex-item{
     text-align: center;
@@ -115,10 +116,10 @@ nav {
 .flex-item img{
     width: 250px;
     height: 300px;
-    transition: all 500ms;
+    transition: all 100ms;
 }
 .flex-item img:hover{
-    transform: scale(1.50);
+    transform: scale(0.06);
     border-radius: 10px;
 }
 .footer-container{
@@ -201,3 +202,23 @@ nav {
 .register-button:hover{
     color: goldenrod;
 }
+.product-form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items:center ;
+}
+.product-upload-button{
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    color: whitesmoke;
+    transition: all 500ms;
+}
+.product-upload-button a{
+    text-decoration: none;
+}
+.product-upload-button:hover{
+    color: goldenrod;
+}
+

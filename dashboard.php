@@ -20,7 +20,7 @@
         <div>
             <ul id="nav-links">
                 <li><a href="./dashboard.php">Dashboard</a></li>
-                <li><a href="./products.html">Products</a></li>
+                <li><a href="./products-upload.php">Upload Products</a></li>
                 <li><a href="./customer-contacted.php">Customer Contacted</a></li>
                 <li><a href="">Orders Received</a></li>
                 <li><a href="">Registrated Customer Data</a></li>
@@ -36,7 +36,7 @@
     <div id="nav-col" >
         <div id="nav-col-links" class="nav-col-links">
                     <a id="link" href="./dashboard.php">Dashboard</a>
-                    <a id="link" href="./products.html">Products</a>
+                    <a id="link" href="./products-upload.php">Upload Products</a>
                     <a id="link" href="./customer-contacted.php">Customer Contacted</a>
                     <a id="link" href="">Orders Received</a>
                     <a id="link" href="">Registrated Customer Data</a>

@@ -20,7 +20,7 @@
         <div>
             <ul id="nav-links">
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./products.html">Products</a></li>
+                <li><a href="./products.php">Products</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./login.php">Login</a></li>
             </ul>
@@ -34,20 +34,56 @@
     <div id="nav-col" >
         <div id="nav-col-links" class="nav-col-links">
             <a id="link" href="./index.html">Home</a>
-            <a id="link" href="./products.html">Products</a>
-<<<<<<< HEAD
+            <a id="link" href="./products.php">Products</a>
             <a id="link" href="./contact.php">Contact</a>
-=======
-            <a id="link" href="./contact.html">Contact</a>
->>>>>>> 60db960d1a1d4f664caea900da6daedac2e0fb95
             <a id="link" href="./login.php">Login</a>
         </div>
     </div>
     <!-- Nav End -->
 
+     <!-- Men T-Shirt Collection -->
+
+     <div class="section-1" id="section-1" >
+        <h1 style="font-size: 40px;">Men T-Shirt Collection</h1>
+    </div>
 
 
 
+<!-- Products Uploaded with PHP start -->
+<?php
+        include("conn.php");
+        $sql = "SELECT * FROM `product`";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_num_rows($result);
+        if($row > 0){
+            ?>
+
+            <?php
+            while($row = mysqli_fetch_assoc($result)){
+
+                ?>
+     <div class="grid-container">
+           <div class="T-shirts-collections">
+             <div class="flex-item">
+               <div><?php echo "<img src='".$row['product_image']."' height='200px' width='300px'>"  ?></div>
+               <h2><?php echo $row['product_name']?></h2>
+               <h3><?php echo $row['product_description']?></h3>
+               <button>Buy Now</button>
+              </div>
+            </div>
+     </div>
+            <?php
+        }
+?>
+<?php
+        }else{
+            echo "No Record Found";
+            mysqli_close($conn);
+        }
+
+        ?>
+
+<!-- Products Uploaded with PHP end -->
     
 <!-- Footer Start -->
 

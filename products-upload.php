@@ -45,82 +45,35 @@
     </div>
     <!-- Nav End -->
 
-    <?php
-include ('conn.php');
-$sql = "SELECT * FROM `contact`";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_num_rows($result);
-if($row > 0){
-    ?>
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Customer Name</th>
-            <th scope="col">Mobile</th>
-            <th scope="col">Email</th>
-            <th scope="col">Message</th>
-            <th scope="col">Action</th>
-        </tr>
-    </thead>
-    
-    <tbody>
-        <?php
-        while($row = mysqli_fetch_assoc($result)){
-            ?>
-            <tr>
-            <td><?php echo $row['id']?></td>
-            <td><?php echo $row['cname']?></td>
-            <td><?php echo $row['cmobile']?></td>
-            <td><?php echo $row['cemail']?></td>
-            <td><?php echo $row['cmessage']?></td>
-            <td><a href="customer-contacted-edit.php?id=<?php echo $row['id'] ?>"><button>Edit</button></a></td>
-            <td><a href="customer-contacted-delete.php?id=<?php echo $row['id']?>"><button>Delete</button></a></td>
-        </tr>
-        <?php
-        }
-    }else {
-        echo "No Record Found";
-        mysqli_close($conn);
-    }
-    ?>
-        </tbody>
-    </table>
-<!-- Table End -->
+    <div class="product-form">
+        <h1>Upload Products</h1>
+        <form action="product-insert.php" method="post" enctype="multipart/form-data" >
 
+            <label for="product-title">Product Title
+                <input type="text" name="product-name" id="product-name" style="margin-left: 60px; width: 200px">
+            </label><br><br>
 
+            <label for="product-description">Product Description
+                <input type="text" name="product-description" id="product-description" style="margin-left: 10px;width:200px">
+            </label><br><br>
 
+            <label for="">Product Image
+                <input type="file" name="product-image" style="margin-left: 45px"> <br><br>
+            </label><br><br>
 
+            <input type="submit" value="Upload Product" name="upload-product" class="product-upload-button"  style="margin-left: 120px;">
+        </form>
+        <br>
+        <br>
 
-
-
+        <h1>Edit and Delete Product</h1>
+        <button class="product-upload-button"> <a href="./product-edit.php" class="product-upload-button" >Edit OR Delete Product </a></button>        
+        
+    </div>
 
 
     
-<!-- Footer Start -->
 
-<div class="footer-container">
-    <div class="footer-logo">
-      <img src="./lmages/logo.jpg" alt="suckers" width="160" height="60">
-    </div>
-  
-    <div class="footer-links">
-      <a href="">Return and Exchange</a>
-      <a href="">Payment Methods</a>
-      <a href="">Delivery Charges</a>
-    </div>
-  
-    <div class="footer-social">
-      <i class="fa-brands fa-facebook"></i>
-      <i>Instagram</i>
-      <i>Whatsapp</i>
-      <i>Message</i>
-    </div>
-  
-  
-  
-  
-  </div>
     
     <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
