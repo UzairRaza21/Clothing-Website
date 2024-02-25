@@ -54,7 +54,7 @@ include("login-auth.php");
     
 <!-- Footer Start -->
 
-<div class="footer-container">
+<!-- <div class="footer-container">
     <div class="footer-logo">
       <img src="./lmages/logo.jpg" alt="suckers" width="160" height="60">
     </div>
@@ -72,10 +72,7 @@ include("login-auth.php");
       <i>Message</i>
     </div>
   
-  
-  
-  
-  </div>
+  </div> -->
     
     <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

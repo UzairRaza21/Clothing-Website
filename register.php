@@ -1,25 +1,3 @@
-<?php
-include("conn.php");
-if (isset($_POST['register'])){
-
-    if($_POST['passwor'] != $_POST['cpassword']){
-        echo "Please enter same password";
-    }else{
-        $username = $_POST['username'];
-        $fullname = $_POST['fullname'];
-        $email = $_POST['email'];
-        $password = $_POST['passwor'];
-        $cpassword = $_POST['cpassword'];
-
-        $sql = "INSERT INTO `user`(`username`, `fullname`, `email`, `passwor`, `cpassword`) VALUES ('{$username}','{$fullname}','{$email}','{$password}','{$cpassword}')";
-        $result = mysqli_query($conn, $sql);
-        header ("location : login.php");
-
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +46,7 @@ if (isset($_POST['register'])){
     <div class="register-container">
 
         <h1 style="margin-bottom: 20px;">Register Yourself</h1>
-        <form method="post" action="">
+        <form  action="register-insert.php" method="post">
             <label for="">Username
                 <input type="text" name="username" id="username" >
             </label><br><br>
@@ -87,8 +65,8 @@ if (isset($_POST['register'])){
             
             <input type="submit" value="Submit" name="register" class="register-button">
             <br><br>
-            <p>Already have Account? <a href="login.php">Login</a></p>
         </form>
+        <p>Already have Account? <a href="login.php">Login</a></p>
         
     </div>
     

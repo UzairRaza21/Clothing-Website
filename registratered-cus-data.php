@@ -45,11 +45,51 @@
     </div>
     <!-- Nav End -->
 
-
-
-
+    <!-- Registrated Customer Data Start -->
+    <?php
+include ('conn.php');
+$sql = "SELECT * FROM `user`";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_num_rows($result);
+if($row > 0){
+    ?>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Customer ID</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
     
-
+    <tbody>
+        <?php
+        while($row = mysqli_fetch_assoc($result)){
+            ?>
+            <tr>
+                <!-- We enter column name mention in sql database -->
+            <td><?php echo $row['id']?></td>
+            <td><?php echo $row['username']?></td>
+            <td><?php echo $row['fullname']?></td>
+            <td><?php echo $row['email']?></td>
+            <td><?php echo $row['passwor']?></td>
+            <td><a href="registrated-cus-edit-del.php?cid=<?php echo $row['id'] ?>"><button>Edit</button></a></td>
+            <td><a href="registrated-cus-edit-del.php?cid=<?php echo $row['id']?>"><button>Delete</button></a></td>
+        </tr>
+        <?php
+        }
+    }else {
+        echo "No Record Found";
+        mysqli_close($conn);
+    }
+    ?>
+        </tbody>
+    </table>
+    
+   <!-- Registrated Customer Data End -->
     
     <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

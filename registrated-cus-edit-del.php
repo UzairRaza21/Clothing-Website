@@ -45,8 +45,44 @@
     </div>
     <!-- Nav End -->
 
+    <!-- Edit Registrated Customer Data with PHP Start-->
+    <?php
+    include('conn.php');
+    $customer_id = $_GET['cid'];
+    $sql = "SELECT * FROM `user` WHERE id = {$customer_id}";
+    $result = mysqli_query($conn, $sql);
+    if(mysqli_num_rows($result)> 0){
+        while($row = mysqli_fetch_assoc($result)){
+        ?>
+        <h1 style="margin-bottom: 20px;">Register Yourself</h1>
+        <form  action="registrated-cus-edit.-code.php" method="post">
+            <label for="">Username
+                <input type="hidden" name="userid" id="userid" value="<?php echo $row['id'] ?>">
+                <input type="text" name="username" id="username" value="<?php echo $row['username'] ?>">
+            </label><br><br>
+            <label for="">Full Name
+                <input type="text" name="fullname" id="name" value="<?php echo $row['fullname'] ?>">
+            </label><br><br>
+            <label for="">Email
+                <input type="email" name="email" id="email" style="margin-left: 32px;" value="<?php echo $row['email'] ?>">
+            </label><br><br>
+            <label for="">Password
+                <input type="text" name="passwor" id="password" value="<?php echo $row['passwor'] ?>">
+            </label><br><br>
+            <label for="">Confirm Password
+                <input type="text" name="cpassword" id="cpassword" value="<?php echo $row['cpassword'] ?>">
+            </label><br><br>
+            
+            <input type="submit" value="Edit Data" name="register-edit" class="register-button">
+            <br><br>
+        </form>
 
 
+    <?php
+        }
+    }
+    ?>
+    <!-- Edit Registrated Customer Data with PHP End-->
 
     
 
