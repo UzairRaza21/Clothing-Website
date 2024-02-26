@@ -65,7 +65,7 @@
      <div class="grid-container">
            <div class="T-shirts-collections">
              <div class="flex-item">
-               <div><?php echo "<img src='".$row['product_image']."' height='200px' width='300px'>"  ?></div>
+               <div><?php echo "<img src='uploaded-Products/".$row['product_image']."' height='200px' width='300px'>"  ?></div>
                <h2><?php echo $row['product_name']?></h2>
                <h3><?php echo $row['product_description']?></h3>
                <button>Buy Now</button>
