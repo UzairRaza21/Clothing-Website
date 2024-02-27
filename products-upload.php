@@ -57,6 +57,10 @@
                 <input type="text" name="product-description" id="product-description" style="margin-left: 10px;width:200px">
             </label><br><br>
 
+            <label for="product-price">Product Price
+                <input type="text" name="product-price" id="product-price" style="margin-left: 10px;width:200px">
+            </label><br><br>
+
             <label for="">Product Image
                 <input type="file" name="product-image" style="margin-left: 45px"> <br><br>
             </label><br><br>

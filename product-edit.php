@@ -70,13 +70,18 @@ if(isset($_POST['product-edit'])){
     while($row = mysqli_fetch_assoc($result)){
         ?>
         <br>
-        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data" class="product-form">
+        <form action="product-edit-code.php" method="post" enctype="multipart/form-data" class="product-form">
         <label for="product-name">Product Title
+        <input type="hidden" name="product-id" value="<?php echo $row['product_id']; ?>"  style="margin-left: 50px">
             <input type="text" name="product-name" value="<?php echo $row['product_name']; ?>"  style="margin-left: 50px">
         </label><br><br>
 
         <label for="product-description">Product Description
             <input type="text" name="product-description" value="<?php echo $row['product_description']; ?>" >
+        </label><br><br>
+
+        <label for="product-price">Product Price
+            <input type="number" name="product-price" value="<?php echo $row['product_price']; ?>" >
         </label><br><br>
 
         <label for="product-image">Product-Image
@@ -92,24 +97,7 @@ if(isset($_POST['product-edit'])){
 }
 ?>
 
-<?php
 
-if (isset($_POST['upload-product'])){
-include('conn.php');
-
-$pname = $_POST['product_name'];
-$pdescription = $_POST['product_description'];
-$pimage = $_POST['product-image'];
-
-
-$sql = "UPDATE `product`SET `product_name` = '{$pname}', `product_description` = '{$pdescription}', `product_image` = '{$pimage}' WHERE product_id = '{$p_id}'";
-$result = mysqli_query($conn, $sql) or die ("Query not successful");
-
-header('location: product-edit.php');
-mysqli_close($conn);
-
-}
-?>
 
 <!-- Delete Start -->
 

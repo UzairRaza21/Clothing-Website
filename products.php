@@ -70,7 +70,11 @@
                     <div><?php echo "<img src='uploaded-Products/".$row['product_image']."' height='200px' width='300px'>"  ?></div>
                     <h2><?php echo $row['product_name']?></h2>
                     <h3><?php echo $row['product_description']?></h3>
-                    <button>Buy Now</button>
+                    <h3><?php echo $row['product_price']?></h3>
+                    <form action="" method="post">
+                        <input type="number" name="qty" id="">
+                        <input type="submit" value="Buy Now" name="buy">
+                    </form>
                 </div>
                         
 
