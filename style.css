@@ -127,6 +127,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 30px;
+    clear: left;
 
 }
 .footer-links{
@@ -139,6 +140,7 @@ nav {
     text-decoration: none;
     color: whitesmoke;
     transition: all 500ms;
+    margin: 3px;
 }
 .footer-links > a:hover {
     color: goldenrod;
@@ -147,6 +149,11 @@ nav {
     display: flex;
     flex-direction: column;
     color: whitesmoke;
+}
+.footer-social i{
+    color: whitesmoke;
+    font-size: 20px;
+    margin: 5px;
 }
 .contact-container{
     display: flex;
@@ -220,4 +227,9 @@ nav {
 .product-upload-button:hover{
     color: goldenrod;
 }
-
+.T-shirts-collections-1{
+    float: left;
+}
+#product-cart{
+    margin: 30px ;
+}

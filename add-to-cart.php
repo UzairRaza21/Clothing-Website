@@ -24,13 +24,13 @@
                 <li><a href="./products.php">Products</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./login.php">Login</a></li>
-                <li><a href="./add-to-cart.php" style="margin-left: 10px; color: whitesmoke; font-size: 18px;"><i class="fa-solid fa-cart-shopping"></i><sub>1</sub></a></li>
+                <li><a href="" style="margin-left: 10px; color: whitesmoke; font-size: 18px;"><i class="fa-solid fa-cart-shopping"></i><sub>1</sub></a></li>
             </ul>
         </div>
 
         <div id="menu" >
             <img onclick="openMenu()" src="./lmages/hamburger.png" alt="menu" width="20">
-            <a href="./add-to-cart.php" style="margin-left: 10px; color: whitesmoke; font-size: 20px;"><i class="fa-solid fa-cart-shopping"></i><sub>1</sub></a>
+            <a href="" style="margin-left: 10px; color: whitesmoke; font-size: 20px;"><i class="fa-solid fa-cart-shopping"></i><sub>1</sub></a>
         </div>
     </nav>
     
@@ -46,39 +46,12 @@
     <!-- Nav End -->
 
 
-    <!-- Contact Us Start -->
-    <div class="contact-container">
-        <h1 >Contact Us</h1>
-        <form action="insert.php" method="post" >
-            <label for="cname" >Name 
-                <input type="text" name="cname" id="cname" style="margin-left: 22px; width: 250px">
-            </label><br><br>
-
-            <label for="cmobile">Mobile
-                <input type="text" name="cmobile" id="cmobile" style="margin-left: 17px; width: 250px" >
-            </label><br><br>
-
-            <label for="cemail">Email
-                <input type="email" name="cemail" id="cemail" style="margin-left: 30px; width: 250px">
-            </label><br><br>
-
-            <label for="cmessage">Message
-                <textarea name="cmessage" id="cmessage" cols="40" rows="8" style="margin-left: 5px; width: 250px"></textarea>
-            </label><br><br>
-
-            <input type="submit" value="Submit" class="contact-button" name="submitted">
-        </form>
-
-    </div>
-
-
-
-    <!-- Contact us End -->
 
 
 
 
-    
+
+
 <!-- Footer Start -->
 
 <div class="footer-container">
@@ -101,9 +74,11 @@
   </div>
 
 
-  </div>
-    
-    <script src="./app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-  </html>
+
+
+</div>
+  
+  <script src="./app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

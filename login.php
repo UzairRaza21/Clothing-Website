@@ -30,6 +30,7 @@ if (isset($_POST['login'])){
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./lmages/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
@@ -46,21 +47,24 @@ if (isset($_POST['login'])){
                 <li><a href="./products.php">Products</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./login.php">Login</a></li>
+                <li><a href="./add-to-cart.php" style="margin-left: 10px; color: whitesmoke; font-size: 18px;"><i class="fa-solid fa-cart-shopping"></i><sub>1</sub></a></li>
             </ul>
         </div>
 
-        <div id="menu" onclick="openMenu()">
-            <img src="./lmages/hamburger.png" alt="menu" width="20">
+        <div id="menu" >
+            <img onclick="openMenu()" src="./lmages/hamburger.png" alt="menu" width="20">
+            <a href="./add-to-cart.php" style="margin-left: 10px; color: whitesmoke; font-size: 20px;"><i class="fa-solid fa-cart-shopping"></i><sub>1</sub></a>
         </div>
     </nav>
     
     <div id="nav-col" >
         <div id="nav-col-links" class="nav-col-links">
             <a id="link" href="./index.html">Home</a>
-            <a id="link" href="./products.html">Products</a>
+            <a id="link" href="./products.php">Products</a>
             <a id="link" href="./contact.php">Contact</a>
             <a id="link" href="./login.php">Login</a>
         </div>
+        
     </div>
     <!-- Nav End -->
 
@@ -91,27 +95,28 @@ if (isset($_POST['login'])){
 <!-- Footer Start -->
 
 <div class="footer-container">
-    <div class="footer-logo">
-      <img src="./lmages/logo.jpg" alt="suckers" width="160" height="60">
-    </div>
-  
-    <div class="footer-links">
-      <a href="">Return and Exchange</a>
-      <a href="">Payment Methods</a>
-      <a href="">Delivery Charges</a>
-    </div>
-  
-    <div class="footer-social">
-      <i class="fa-brands fa-facebook"></i>
-      <i>Instagram</i>
-      <i>Whatsapp</i>
-      <i>Message</i>
-    </div>
-  
-  
-  
-  
+  <div class="footer-logo">
+    <img src="./lmages/logo.jpg" alt="suckers" width="160" height="60">
   </div>
+
+  <div class="footer-links">
+    <a href="">Return and Exchange</a>
+    <a href="">Payment Methods</a>
+    <a href="">Delivery Charges</a>
+    <a href="./dashboard.php">Admin Dashboard</a>
+  </div>
+
+  <div class="footer-social">
+    <a href=""><i class="fa-brands fa-facebook"></i></a>
+    <a href=""><i class="fa-brands fa-instagram"></i> </a>
+    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+    <a href=""><i class="fa-solid fa-message"></i></a>
+  </div>
+
+
+
+
+</div>
     
     <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
