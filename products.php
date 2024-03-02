@@ -47,52 +47,62 @@
     <h1 style="text-align: center;">T-Shirt collections</h1>
 
 
-
 <!-- Products Uploaded with PHP start -->
 <?php
         include("conn.php");
         $sql = "SELECT * FROM `product`";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_num_rows($result);
-        if($row > 0){
-            ?>
-
-            <?php
-            while($row = mysqli_fetch_assoc($result)){
-
-                ?>
-         
-     <div class="grid-container">
+       
+        ?>
+        
+         <!-- Product Cart HTML Start -->
+    
            <div class="T-shirts-collections-1">
                        
+           <?php
+        if ($row > 0) {
 
-                <div class="flex-item" id="product-cart">
-                    <div><?php echo "<img src='uploaded-Products/".$row['product_image']."' height='200px' width='300px'>"  ?></div>
-                    <h2><?php echo $row['product_name']?></h2>
-                    <h3><?php echo $row['product_description']?></h3>
-                    <h3><?php echo $row['product_price']?></h3>
-                    <form action="" method="post">
-                        <input type="number" name="qty" id="">
-                        <input type="submit" value="Buy Now" name="buy">
+            while ($row = mysqli_fetch_assoc($result)) {
+
+        ?>
+                <div class="flex-item-1" id="product-cart">
+
+                    <!-- Cart display Product Start-->
+                    <div><?php echo "<img src='uploaded-Products/".$row['product_image']."' >"  ?></div>
+                    <h3><?php echo $row['product_name']?></h3>
+                    <h4><?php echo $row['product_description']?></h4>
+                    <h4>Price : Rs. <?php echo $row['product_price']?></h4>
+                    <!-- Cart dispaly Product End -->
+
+
+                    <!-- Form for Order start -->
+                    <form action="add-to-cart-order-insert.php" method="post">
+                    <input type="hidden" name="pid" value="<?php echo $row['product_id'] ?>">
+                    <input type="hidden" name="price" value="<?php echo $row['product_price'] ?>">
+                        
+                        <label for="">Quantity: 
+                            <input type="number" name="qty" id="" value="1" min="1">
+                        </label><br><br>
+                        <input type="submit" value="Buy Now" name="buy" class="cart-button" > 
                     </form>
+                    <!-- Form for Order end -->
+
                 </div>
                         
 
             </div>
-     </div>
-            <?php
-        }
-?>
-<?php
-        }else{
-            echo "No Record Found";
-            mysqli_close($conn);
-        }
-
+     <?php
+            }
+        }else {
+            echo "<h4>No Products</h4>";
+        };
         ?>
-
+<!-- Product Cart HTML End -->
+     
 <!-- Products Uploaded with PHP end -->
     
+
 <!-- Footer Start -->
 
 <div class="footer-container">

@@ -44,6 +44,53 @@
         
     </div>
     <!-- Nav End -->
+<!-- Add to Cart Star -->
+    <?php
+include ('conn.php');
+$sql = "SELECT * FROM `product`";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_num_rows($result);
+if($row > 0){
+    ?>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Image</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <?php
+        while($row = mysqli_fetch_assoc($result)){
+            ?>
+            <tr>
+            <td><?php echo $row['product_id']?></td>
+            <td><?php echo $row['product_name']?></td>
+            <td><?php echo "<img src='uploaded-Products/".$row['product_image']."' height='80px' width='80px'>"  ?></td>
+            <td><?php echo $row['product_price']?></td>
+            <td></td>
+            <td></td>
+            <!-- <td><a href="customer-contacted-edit.php?id=<?php echo $row['id'] ?>"><button>Edit</button></a></td>
+            <td><a href="customer-contacted-delete.php?id=<?php echo $row['id']?>"><button>Delete</button></a></td> -->
+        </tr>
+        <?php
+        }
+    }else {
+        echo "No Record Found";
+        mysqli_close($conn);
+    }
+    ?>
+        </tbody>
+    </table>
+<!-- Table End -->
+
+
+
 
 
 

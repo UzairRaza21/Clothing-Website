@@ -102,14 +102,14 @@ nav {
     border-radius: 2px;
    
 }
-.flex-item > button{
+.cart-button{
     width: 200px;
     background-color: black;
     color: whitesmoke;
     transition: all 500ms;
     height: 40px;
 }
-.flex-item > button:hover{
+.cart-button:hover{
     color: goldenrod;
 }
 .flex-item img{
@@ -227,9 +227,22 @@ nav {
 .product-upload-button:hover{
     color: goldenrod;
 }
-.T-shirts-collections-1{
+
+.flex-item-1{
+    display: flex;
+    flex-direction: column;
     float: left;
+    text-align: center;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 2px;
 }
-#product-cart{
-    margin: 30px ;
+.flex-item-1 img{
+    width: 250px;
+    height: 300px;
+    transition: all 300ms;
+}
+.flex-item-1 img:hover{
+    transform: scale(1.30);
+    border-radius: 10px;
 }
