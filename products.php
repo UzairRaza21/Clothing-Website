@@ -20,7 +20,7 @@
         
         <div>
             <ul id="nav-links">
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.php">Home</a></li>
                 <li><a href="./products.php">Products</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./login.php">Login</a></li>
@@ -36,7 +36,7 @@
     
     <div id="nav-col" >
         <div id="nav-col-links" class="nav-col-links">
-            <a id="link" href="./index.html">Home</a>
+            <a id="link" href="./index.php">Home</a>
             <a id="link" href="./products.php">Products</a>
             <a id="link" href="./contact.php">Contact</a>
             <a id="link" href="./login.php">Login</a>
@@ -80,6 +80,7 @@
                     <form action="add-to-cart-order-insert.php" method="post">
                     <input type="hidden" name="pid" value="<?php echo $row['product_id'] ?>">
                     <input type="hidden" name="price" value="<?php echo $row['product_price'] ?>">
+                    <input type="hidden" name="product_name" value="<?php echo $row['product_name'] ?>">
                         
                         <label for="">Quantity: 
                             <input type="number" name="qty" id="" value="1" min="1">

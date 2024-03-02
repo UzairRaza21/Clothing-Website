@@ -20,7 +20,7 @@
         
         <div>
             <ul id="nav-links">
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.php">Home</a></li>
                 <li><a href="./products.php">Products</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./login.php">Login</a></li>
@@ -36,7 +36,7 @@
     
     <div id="nav-col" >
         <div id="nav-col-links" class="nav-col-links">
-            <a id="link" href="./index.html">Home</a>
+            <a id="link" href="./index.php">Home</a>
             <a id="link" href="./products.php">Products</a>
             <a id="link" href="./contact.php">Contact</a>
             <a id="link" href="./login.php">Login</a>
@@ -47,7 +47,7 @@
 <!-- Add to Cart Star -->
     <?php
 include ('conn.php');
-$sql = "SELECT * FROM `product`";
+$sql = "SELECT * FROM `order` INNER JOIN `product` ON order.product_id = product.product_id ";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_num_rows($result);
 if($row > 0){
@@ -55,7 +55,7 @@ if($row > 0){
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">Order No.</th>
             <th scope="col">Product Name</th>
             <th scope="col">Product Image</th>
             <th scope="col">Price</th>
@@ -64,17 +64,17 @@ if($row > 0){
         </tr>
     </thead>
     
-    <tbody>
+    <tbody> 
         <?php
         while($row = mysqli_fetch_assoc($result)){
             ?>
             <tr>
-            <td><?php echo $row['product_id']?></td>
+            <td><?php echo $row['order_id']?></td>
             <td><?php echo $row['product_name']?></td>
             <td><?php echo "<img src='uploaded-Products/".$row['product_image']."' height='80px' width='80px'>"  ?></td>
             <td><?php echo $row['product_price']?></td>
-            <td></td>
-            <td></td>
+            <td><?php echo $row['qty']?></td>
+            <td><?php echo $row['subtotal']?></td>
             <!-- <td><a href="customer-contacted-edit.php?id=<?php echo $row['id'] ?>"><button>Edit</button></a></td>
             <td><a href="customer-contacted-delete.php?id=<?php echo $row['id']?>"><button>Delete</button></a></td> -->
         </tr>

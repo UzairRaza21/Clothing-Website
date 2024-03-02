@@ -43,7 +43,7 @@ if (isset($_POST['login'])){
         
         <div>
             <ul id="nav-links">
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.php">Home</a></li>
                 <li><a href="./products.php">Products</a></li>
                 <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./login.php">Login</a></li>
@@ -59,7 +59,7 @@ if (isset($_POST['login'])){
     
     <div id="nav-col" >
         <div id="nav-col-links" class="nav-col-links">
-            <a id="link" href="./index.html">Home</a>
+            <a id="link" href="./index.php">Home</a>
             <a id="link" href="./products.php">Products</a>
             <a id="link" href="./contact.php">Contact</a>
             <a id="link" href="./login.php">Login</a>
