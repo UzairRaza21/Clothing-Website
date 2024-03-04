@@ -13,6 +13,7 @@
 </head>
 <body style="background-color: whitesmoke;" >
     <!-- Nav Start -->
+    
     <nav>
         <div id="logo-pic">
             <img src="./lmages/logo.jpg" alt="threads" width="180" height="60">

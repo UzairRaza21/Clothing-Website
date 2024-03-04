@@ -3,15 +3,16 @@ session_start();
 include("conn.php");
 
 if (isset($_POST['login'])){
-
+    
     $username = $_POST['username'];
     $password = $_POST['passwor'];
 
     $sql = "SELECT * FROM user WHERE username = '$username' AND passwor = '$password'";
     $result = mysqli_query($conn, $sql);
     $count = mysqli_num_rows($result);
-
+$row =mysqli_fetch_assoc($result);
     if ($count == 1){
+        $_SESSION['id'] = $row['id'];
         $_SESSION['username'] = $username;
         header("location: welcome.php");
     }else{
@@ -71,7 +72,7 @@ if (isset($_POST['login'])){
     <!-- Login Start -->
     <div class="login-container">
         <h1>Login</h1>
-        <form action="" method="post" >
+        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" >
             <label for="uname">Username 
                 <input type="text" name="username" id="uname" style="margin-left: 10px; width:220px">
             </label><br><br>

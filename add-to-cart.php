@@ -1,3 +1,13 @@
+<?php
+
+include 'conn.php';
+include 'login-auth.php';
+
+$uid = $_SESSION['username'];
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,41 +23,13 @@
 </head>
 <body style="background-color: whitesmoke;" >
     <!-- Nav Start -->
-    <nav>
-        <div id="logo-pic">
-            <img src="./lmages/logo.jpg" alt="threads" width="180" height="60">
-        </div>
-        
-        <div>
-            <ul id="nav-links">
-                <li><a href="./index.php">Home</a></li>
-                <li><a href="./products.php">Products</a></li>
-                <li><a href="./contact.php">Contact</a></li>
-                <li><a href="./login.php">Login</a></li>
-                <li><a href="" style="margin-left: 10px; color: whitesmoke; font-size: 18px;"><i class="fa-solid fa-cart-shopping"></i><sub>1</sub></a></li>
-            </ul>
-        </div>
+    <?php include("nav.php"); ?>
 
-        <div id="menu" >
-            <img onclick="openMenu()" src="./lmages/hamburger.png" alt="menu" width="20">
-            <a href="" style="margin-left: 10px; color: whitesmoke; font-size: 20px;"><i class="fa-solid fa-cart-shopping"></i><sub>1</sub></a>
-        </div>
-    </nav>
-    
-    <div id="nav-col" >
-        <div id="nav-col-links" class="nav-col-links">
-            <a id="link" href="./index.php">Home</a>
-            <a id="link" href="./products.php">Products</a>
-            <a id="link" href="./contact.php">Contact</a>
-            <a id="link" href="./login.php">Login</a>
-        </div>
-        
-    </div>
     <!-- Nav End -->
 <!-- Add to Cart Star -->
     <?php
-include ('conn.php');
-$sql = "SELECT * FROM `order` INNER JOIN `product` ON order.product_id = product.product_id ";
+
+$sql = "SELECT * FROM `order`, `product` ON order.product_id = product.product_id AND order.user_id = user_id";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_num_rows($result);
 if($row > 0){
@@ -75,8 +57,7 @@ if($row > 0){
             <td><?php echo $row['product_price']?></td>
             <td><?php echo $row['qty']?></td>
             <td><?php echo $row['subtotal']?></td>
-            <!-- <td><a href="customer-contacted-edit.php?id=<?php echo $row['id'] ?>"><button>Edit</button></a></td>
-            <td><a href="customer-contacted-delete.php?id=<?php echo $row['id']?>"><button>Delete</button></a></td> -->
+            <td><a href="add-to-cart-order-del.php?order_id=<?php echo $row['order_id']?>"><button>Delete</button></a></td>
         </tr>
         <?php
         }
